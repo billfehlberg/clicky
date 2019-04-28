@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html, body, #root {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("./images/milky-way-2695569_960_720.jpg");
+}
+

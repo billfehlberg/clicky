@@ -1,0 +1,47 @@
+[
+    {
+      "id": 1,
+      "name": "Mercury",
+      "image": "/images/mercury.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Venus",
+      "image": "/images/venus.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Earth",
+      "image": "/images/earth.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "Mars",
+      "image": "/images/mars.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Jupiter",
+      "image": "/images/jupiter.png"
+    },
+    {
+      "id": 6,
+      "name": "Saturn",
+      "image": "/images/saturn.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Uranus",
+      "image": "/images/uranus.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Neptune",
+        "image": "images/neptune.jpg"
+      },
+      {
+        "id": 9,
+        "name": "Pluto",
+        "image": "/images/pluto.png"
+      }
+  ]
