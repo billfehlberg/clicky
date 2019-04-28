@@ -12,16 +12,24 @@ import Title from "./components/Title";
 
 class App extends Component {
   state = {
-    Planets
+    Planets,
+    score: 0
   };
+
+  handleIncrement = () => {
+    // We always use the setState method to update a component's state
+    this.setState({ score: this.state.score + 1 });
+  };
+
+
   render() {
     return (
       <Wrapper>
           <div className="container">
             <div className="row topRow rounded-top bg-secondary text-center">
-              <div className="col-3"><Navbar>Planet <br></br>Clicker</Navbar></div>
-              <div className="col-5 Title"><Navbar>Pick Any Planet To Begin</Navbar></div>
-              <div className="col bg-info"><PScore>Player Score:</PScore></div>
+              <div className="col"><Navbar>Planet <br></br>Clicker</Navbar></div>
+              <div className="col Title"><Navbar>Pick Any Planet To Begin</Navbar></div>
+              <div className="col bg-info"><PScore>Player Score: {this.state.score} </PScore></div>
               <div className="col bg-info"><TScore>Top Score: </TScore></div>
             </div>
             <div className="row titleRow bg-primary text-center">
@@ -30,6 +38,7 @@ class App extends Component {
             <div className="row bg-secondary d-flex justify-content-center">
             {this.state.Planets.map(planet => (
                 <PlanetCard 
+                  handleIncrement={this.handleIncrement}
                   id={planet.id}
                   key={planet.id}
                   name={planet.name}
