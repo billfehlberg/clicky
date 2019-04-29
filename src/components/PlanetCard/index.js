@@ -5,7 +5,7 @@ import "./style.css";
 function PlanetCard(props) {
   return (
     <div className="card">
-      <div onClick={() => props.handleIncrement(props.score)} className="img-container">
+      <div onClick={() => props.handleClick(props.id) } className="img-container">
         <img alt={props.name} src={props.image}/>
       </div>
       <div className="content">
