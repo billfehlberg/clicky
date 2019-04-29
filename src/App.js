@@ -9,15 +9,13 @@ import Footer from "./components/Footer";
 import Planets from "./planets.json";
 import Title from "./components/Title";
 
-//function shufflePlanets(array) {
-//  for (let i = array.length - 1; i > 0; i--) {
-//    let j = Math.floor(Math.random() * (i + 1));
-//    [array[i], array[j]] = [array[j], array[i]];
-//  }
-//  return array;
-//};
-
-
+function shufflePlanets(array) {
+ for (let i = array.length - 1; i > 0; i--) {
+   let j = Math.floor(Math.random() * (i + 1));
+   [array[i], array[j]] = [array[j], array[i]];
+ }
+ return array;
+};
 
 class App extends Component {
   state = {
@@ -32,11 +30,12 @@ class App extends Component {
     if (this.state.clicked.indexOf(id) === -1)  {
       this.setState({ 
         clicked: this.state.clicked.concat([id]),
-        score: this.state.score + 1 })
+        score: this.state.score + 1 ,
+        message: "correct select another planet"
+      })
     } else  {
       this.handleReset();
     }
-    return true;
   };
 
   handleReset = () => {
@@ -47,7 +46,12 @@ class App extends Component {
       message: "Game Over. Please select a planet to begin"
     })
   };
-  
+
+  handleShuffle = () => {
+    let shuffledPlanets = shufflePlanets(Planets);
+    this.setState({ Planets: shuffledPlanets });
+  };
+
   render() {
     return (
       <Wrapper>
