@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/clicky/static/css/main.da3dd8f3.chunk.css",
-    "main.js": "/clicky/static/js/main.2e16861b.chunk.js",
-    "main.js.map": "/clicky/static/js/main.2e16861b.chunk.js.map",
+    "main.css": "/clicky/static/css/main.f79d027c.chunk.css",
+    "main.js": "/clicky/static/js/main.72b749eb.chunk.js",
+    "main.js.map": "/clicky/static/js/main.72b749eb.chunk.js.map",
     "runtime~main.js": "/clicky/static/js/runtime~main.c6956f21.js",
     "runtime~main.js.map": "/clicky/static/js/runtime~main.c6956f21.js.map",
     "static/js/2.884c28c3.chunk.js": "/clicky/static/js/2.884c28c3.chunk.js",
     "static/js/2.884c28c3.chunk.js.map": "/clicky/static/js/2.884c28c3.chunk.js.map",
     "index.html": "/clicky/index.html",
-    "precache-manifest.0d9e6f7b1a90f596086133579a49536f.js": "/clicky/precache-manifest.0d9e6f7b1a90f596086133579a49536f.js",
+    "precache-manifest.f7382e2c83c7746d5b08197ca4dbccbc.js": "/clicky/precache-manifest.f7382e2c83c7746d5b08197ca4dbccbc.js",
     "service-worker.js": "/clicky/service-worker.js",
-    "static/css/main.da3dd8f3.chunk.css.map": "/clicky/static/css/main.da3dd8f3.chunk.css.map",
+    "static/css/main.f79d027c.chunk.css.map": "/clicky/static/css/main.f79d027c.chunk.css.map",
     "static/media/index.css": "/clicky/static/media/milky-way-2695569_960_720.85a1d1d2.jpg"
   }
 }
