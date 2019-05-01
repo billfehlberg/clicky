@@ -17,6 +17,7 @@ function shufflePlanets(array) {
  return array;
 };
 
+
 class App extends Component {
   state = {
     Planets,
@@ -25,18 +26,33 @@ class App extends Component {
     message: "Pick Any Planet To Begin",
     clicked: []
   };
+  componentDidMount() {
+    this.handleShuffle();
+  }
 
   handleClick = (id) => {
     if (this.state.clicked.indexOf(id) === -1)  {
-      this.setState({ 
-        clicked: this.state.clicked.concat([id]),
-        score: this.state.score + 1 ,
-        message: "correct select another planet"
-      })
+      this.handleIncrement();
+      this.setState({ clicked: this.state.clicked.concat([id])});
     } else  {
       this.handleReset();
     }
   };
+
+  handleIncrement = () => {
+    const newScore = this.state.score + 1;
+    this.setState({
+      score: newScore,
+      message: "correct select another planet"
+    });
+    if (newScore >= this.state.topScore)  {
+      this.setState({ topScore: newScore })
+    }
+    if (newScore === 9) {
+      this.setState({ message: "you beat the game, select a planet begin again" });
+    }
+    this.handleShuffle();
+  }
 
   handleReset = () => {
     this.setState({
@@ -58,7 +74,7 @@ class App extends Component {
           <div className="container">
             <div className="row topRow rounded-top bg-secondary text-center">
               <div className="col"><Navbar>Planet <br></br>Clicker</Navbar></div>
-              <div className="col Title"><Navbar>{this.state.message}</Navbar></div>
+              <div className="col-5 Title"><Navbar>{this.state.message}</Navbar></div>
               <div className="col bg-info"><PScore>Player Score: {this.state.score} </PScore></div>
               <div className="col bg-info"><TScore>Top Score: {this.state.topScore}</TScore></div>
             </div>
